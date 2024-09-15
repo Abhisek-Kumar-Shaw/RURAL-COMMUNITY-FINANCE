@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Off-white background color */
+}
+
+.frame {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* Background color for frame to ensure fallback */
+}
+
+.left-part {
+    flex: 1;
+   /* ? background: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center; Replace with your background image URL */
+    background-size: cover;
+    background-color: #c01d1d; 
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.left-part h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #010a16f6; /* Orange color for the title */
+}
+
+.left-part p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #f5b942; /* Light orange color for the tagline */
+}
+
+.right-part {
+    flex: 1;
+    background: #ffffff; /* White background for the form container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 2rem;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.login-container input {
+    width: calc(100% - 2rem);
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    /* border: 1px solid #ddd;
+    border-radius: 4px; */
+}
+
+.login-container .login-button {
+    width: calc(100% - 2rem);
+    padding: 0.75rem;
+    background-color: #ffa500; /* Orange button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem; /* Space between login and forgot password */
+}
+
+
+.login-container .login-button:hover {
+    background-color: #8d5dfd; /* Orange button color */
+ /* Space between login and forgot password */
+ background-color: #e68a00; 
+}
+
+.forgot-password {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #007bff; /* Blue color for the link */
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.separator hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 0;
+    width: 100%;
+}
+
+.sign-up-button {
+    width: calc(100% - 2rem);
+    padding: 0.75rem;
+    /* background-color: #28a745; Green color for Sign Up button */
+    color: white;
+    background-color:hwb(166 39% 37%);
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem; /* Space between separator and Sign Up button */
+}
+
+.sign-up-button:hover {
+    background-color:hwb(166 30% 51%); /* Darker green for hover effect */
+}
+
+.message {
+    margin-top: 1rem;
+    color: #d9534f; /* Red color for error messages */
+}
+.mobile-view{
+    display: none;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .frame {
+        display: none; /* Hide the frame on mobile */
+    }
+
+    .mobile-view {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #f9f9f9; /* Same off-white background color */
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .mobile-view .login-container {
+        width: 100%;
+        max-width: 360px; /* Slightly smaller max-width for mobile */
+        margin-top: 1rem;
+    }
+
+    .mobile-view h1 {
+        font-size: 2rem;
+        color: #7fb0ed; /* Orange color for the title */
+    }
+    
+.left-part h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #010a16f6; /* Orange color for the title */
+}
+
+    .mobile-view p {
+        font-size: 1rem;
+        color: #f5b942; /* Light orange color for the tagline */
+        margin: 0;
+    }
+
+}
+.input-container {
+    position: relative;
+    margin: 1rem 0;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    border-bottom: 1px solid #ddd; /* Initial light underline */
+    outline: none;
+    font-size: 16px;
+    background: none;
+    transition: border-color 0.3s ease, border-bottom-width 0.3s ease; /* Smooth transition for the underline */
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    transition: all 0.3s ease; /* Smooth transition for label */
+    pointer-events: none;
+    background-color: white;
+    padding: 0 5px;
+}
+
+/* Move label up and make it bold when input is focused or has content */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -5px;
+    left: -5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Make the underline thicker and change color when focused */
+input:focus {
+    border-bottom: 2px solid #007bff; /* Thicker blue underline on focus */
+}
+
+/* Add this to ensure the transition works for the input fields */
+input:not(:focus) {
+    border-bottom: 1px solid #ddd; /* Light underline when not focused */
+}

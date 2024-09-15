@@ -1,0 +1,175 @@
+/* General Styles */
+.signup-form-container {
+    width: 90%;
+    max-width: 350px;
+    margin: 1rem auto; /* Ensure consistent vertical margin */
+    padding: 2rem; /* Padding for internal spacing */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Includes padding and border in total width/height */
+    overflow: hidden; /* Hide any overflowing content */
+}
+.signup-form{
+    margin-top: 3rem;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: red
+  }
+  
+  .login-account {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem; /* Consistent space below the header */
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem; /* Consistent space between inputs */
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ddd;
+    background: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-bottom: 2px solid #007bff;
+}
+
+input[disabled] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    color: #999;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    transform: translateY(-5px);
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.otp-button-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button.otp-button {
+    padding: 0.4rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button.otp-button:hover {
+    background-color: #0056b3;
+}
+
+button.otp-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 1rem; /* Consistent space below the button */
+}
+
+.signup-button:hover {
+    background-color: #218838;
+}
+
+.message {
+    margin-top: 1rem;
+    color: #d9534f;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-form-container {
+        width: 95%; /* Slightly increased width for mobile */
+        padding: 1rem; /* Padding adjusted for mobile */
+        margin: 1rem auto; /* Ensure consistent vertical margin */
+    }
+
+    h2 {
+        margin-bottom: 1rem; /* Adjusted margin for smaller screens */
+    }
+
+    input,
+    button.otp-button,
+    .signup-button {
+        font-size: 14px; /* Adjusted font size */
+    }
+}
+
+@media (max-height: 600px) {
+    .signup-form-container {
+        max-height: calc(100vh - 2rem); /* Ensure form fits within viewport height */
+        overflow-y: auto; /* Enable vertical scrolling only if necessary */
+        padding: 1rem; /* Adjusted padding */
+    }
+
+    .input-container,
+    .signup-button,
+    .error,
+    .message {
+        margin-bottom: 0.5rem; /* Reduced margins */
+    }
+
+    button.otp-button {
+        margin-left: 0.5rem; /* Reduced margin */
+    }
+}
