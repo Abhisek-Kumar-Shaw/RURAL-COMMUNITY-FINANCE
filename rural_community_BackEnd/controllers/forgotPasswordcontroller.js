@@ -16,9 +16,7 @@ const transporter = nodemailer.createTransport({
 
 // Generate OTP and send it to the user's email
 exports.GenerateOtpForgotPassword = async (req, res) => {
-    const { email } = req.body;
-    console.log(email,'emaillllllllllllll');
-    
+    const { email } = req.body;    
     const userData = await signUpModel.findOne({ email: email });
 
     if (!userData) {

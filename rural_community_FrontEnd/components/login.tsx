@@ -28,7 +28,7 @@ function LoginForm() {
                 // cookies.set('token', response.token, { expires: 1 });
                 const result = await response.json();
                 setMessage('Login successful!');
-                // window.location.href ='/'
+                window.location.href ='/'
             } else {
                 const error = await response.json();
                 setMessage(`Error: ${error.message}`);
