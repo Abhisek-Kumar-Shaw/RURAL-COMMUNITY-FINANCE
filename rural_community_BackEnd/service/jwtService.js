@@ -5,7 +5,7 @@ function setUser(userData){
     return jwt.sign(
         { userId: userData._id, email: userData.email },
         secretKey,
-        // { expiresIn: '1h' } // Token expiration time (1 hour in this case)
+        // { expiresIn: '1h' } // Token is expiration time (1 hour in this case)
       );
     
 }
